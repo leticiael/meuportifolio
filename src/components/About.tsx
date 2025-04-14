@@ -8,7 +8,7 @@ export default function About() {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowHat((prev) => !prev);
-    }, 5000); // A cada 5 segundos
+    }, 8000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -35,7 +35,7 @@ export default function About() {
             Red Dead Redemption 2
             {showHat && (
               <img
-                src="/cowboy.png" // Caminho para a imagem do chapéu
+                src="/cowboy.png" 
                 alt="Chapéu de Cowboy"
                 className="absolute animate-hat w-[2rem] h-[2rem]"
               />

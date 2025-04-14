@@ -46,11 +46,9 @@ body {
   }
 }
 
-/* Aplicando a animação */
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-/* Adicione isso ao seu arquivo CSS */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);

@@ -66,7 +66,7 @@ export default function Certifications() {
         </span>
       </h2>
 
-      <div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
+<div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
   {certifications.map((cert, i) => (
     <div
       key={i}

@@ -1,56 +1,85 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-export default function About() {
-  const [showHat, setShowHat] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowHat((prev) => !prev);
-    }, 5000); // A cada 5 segundos
-
-    return () => clearInterval(interval);
-  }, []);
+export default function Projetogit() {
+  const projects = [
+    {
+      title: "Basilisk web/Mobile",
+      description:
+        "Este é um projeto desenvolvido em grupo com colegas da faculdade. Trata-se de um sistema de controle financeiro completo, no qual atuei no backend implementando APIs e fornecendo funcionalidades em PHP para web e Kotlin para mobile.",
+      image: "/basiliskweb.png",
+      link: "https://github.com/leticiael/Basilisk", // Substitua pelo link correto
+    },
+    {
+      title: "SaaSAppointment",
+      description:
+        "Este projeto cria uma interface interativa com o modelo ChatGPT utilizando o Streamlit, permitindo que os usuários façam perguntas e recebam respostas em tempo real. Neste caso, o chatbot é utilizado para a marcação de consultas, com a restrição de não aceitar agendamentos para NotreDame.",
+      image: "/saasapp.png",
+      link: "https://github.com/leticiael/SaaSAppointment",
+    },
+  ];
 
   return (
     <section className="flex flex-col items-center text-center mt-[2.5rem] px-[1rem]">
-      <h1 className="text-white text-[1.875rem] mb-[1.5rem] tracking-wider">Leticia Eltermann</h1>
+      <svg
+        className="mt-[2rem] w-full h-[6rem]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="none"
+          stroke="#6f7173"
+          strokeWidth="3"
+          d="M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160"
+        >
+          <animate
+            attributeName="d"
+            dur="2.5s"
+            repeatCount="indefinite"
+            values="
+                M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
+                M0,160 Q120,260 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
+                M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160
+              "
+          />
+        </path>
+      </svg>
+      <br />
+      <h1 className="text-white text-[1.875rem] mb-[1.5rem] tracking-wider">
+        Projetos Práticos
+      </h1>
+      <br />
+      <br />
 
-      <div className="flex flex-col md:flex-row items-center max-w-[56rem] gap-[2rem]">
-        <img
-          src="/coffeme.png"
-          alt="Letícia"
-          className="w-[24rem] h-[24rem] object-contain rounded transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:shadow-lg"
-        />
-        <p className="text-[0.75rem] mb-[1.5rem] tracking-widest ">/Sobre</p>
-
-        <div className="text-[0.890rem] text-[#e0e0e0] leading-relaxed max-w-[25rem] font-[Questrial] relative">
-          Sou estudante de Engenharia de Software, tenho 22 anos e acredito no poder transformador da tecnologia. Para mim, ela não apenas muda vidas – ela vai mudar a minha. Atualmente, estou no quinto período da faculdade e já tive a oportunidade de atuar em projetos freelancers de desenvolvimento web no Brasil, utilizando tecnologias como PHP, SaaS e Flask, além de participar de projetos em grupo no meio acadêmico.
-          Tenho buscado absorver cada conhecimento que me é ofertado, sempre com entusiasmo e mente aberta.
-          <br />
-          <br />
-          Fora do ambiente tech, sou apaixonada por literatura e leio desde criança. Também coleciono discos de vinil, adoro jogar no PC (meu jogo favorito é{" "}
-          <span className="relative inline-block">
-            Red Dead Redemption 2
-            {showHat && (
-              <img
-                src="/cowboy.png" // Caminho para a imagem do chapéu
-                alt="Chapéu de Cowboy"
-                className="absolute animate-hat w-[2rem] h-[2rem]"
-              />
-            )}
-          </span>
-          , mas sempre estou jogando algum jogo indie) e mantenho uma playlist fiel no Spotify.
-        </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-[2rem] max-w-[56rem]">
+        {projects.map((project, index) => (
+          <div
+  key={index}
+  className="flex flex-col items-center bg-[#1e0a0a] rounded-lg shadow-lg p-[1.5rem] max-w-[24rem] w-full transform transition-transform duration-300 hover:scale-125"
+  style={{ height: "28rem" }} // Define uma altura fixa para os cards
+>
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-[20rem] h-[12rem] object-contain rounded-md mb-[1rem]" // Define uma altura fixa para as imagens
+  />
+  <h2 className="text-white text-[1.25rem] font-bold mb-[0.5rem] text-center">
+    {project.title}
+  </h2>
+  <p className="text-[#e0e0e0] text-[0.875rem] leading-relaxed mb-[1rem] font-[Questrial] text-center line-clamp-3">
+    {project.description}
+  </p>
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-[1rem] py-[0.5rem] bg-[#6f7173] text-black rounded hover:bg-[#4a1c1c] transition-all duration-300 font-[Questrial] text-[1rem]"
+  >
+    Ver Projeto
+  </a>
+</div>
+        ))}
       </div>
-
-      <div className="mt-8 text-[0.875rem] text-[#e0e0e0] leading-relaxed max-w-[56rem] font-[Questrial]">
-        <p>
-          No meu portfólio, você pode ver meus projetos, certificações, tecnologias e artigos que escrevo, com os quais estou aprendendo e aplicando. Estou sempre em busca de oportunidades para crescer na área de tecnologia.
-        </p>
-      </div>
-
       <svg
         className="mt-[2rem] w-full h-[6rem]"
         xmlns="http://www.w3.org/2000/svg"
