@@ -37,7 +37,7 @@ export default function Footer() {
           SQL
         </span>
       </div>
-      <p>Sempre aprendendo, sempre criando. Obrigado por visitar!</p>
+      <p>Sempre aprendendo, sempre criando. Obrigada por visitar!</p>
     </footer>
   );
 }

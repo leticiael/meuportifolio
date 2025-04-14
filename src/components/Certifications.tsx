@@ -10,7 +10,7 @@ const certifications = [
   },
   {
     title: "Certificação PostgreSQL",
-    text: "Certificação em PostgreSQL, aprofundando na linguagem procedural PLpgSQL, abordando consultas, otimização e administração de banco de dados.",
+    text: "Certificação em PostgreSQL, aprofundando na linguagem procedural PLpgSQL.",
     image: "/postgrec.png",
   },
   {
@@ -28,13 +28,12 @@ export default function Certifications() {
   const next = () => setIndex((i) => (i + 1) % certifications.length);
   const prev = () => setIndex((i) => (i - 1 + certifications.length) % certifications.length);
 
-  // Intersection Observer para detectar quando o carrossel entra na viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Ativa quando 10% do elemento está visível
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -51,43 +50,56 @@ export default function Certifications() {
   useEffect(() => {
     if (!isVisible) return;
 
-    const interval = setInterval(next, 5000);
+    const interval = setInterval(next, 7000);
     return () => clearInterval(interval);
   }, [isVisible]);
 
   return (
     <div
       ref={sectionRef}
-      className="w-full max-w-[50rem] mx-auto p-[2rem] text-white bg-black/20 backdrop-blur-md rounded-2xl shadow-lg"
+      className="w-full max-w-[60rem] mx-auto p-[3rem] text-white rounded-2xl shadow-lg font-[Questrial] border-[2px] border-[#6f7173] relative"
     >
-      <h2 className="text-[2.5rem] font-bold mb-[1.5rem] text-center">Certificações</h2>
+      {/* Título maior */}
+      <h2 className="text-[3rem] font-bold mb-[2rem] text-center ">
+        Certificações
+        <span className="block text-[1.25rem] text-gray-500 font-[Questrial] mt-[0.5rem]">
+          Explore as certificações que conquistei ao longo da minha jornada.
+        </span>
+      </h2>
 
-      <div className="flex flex-col items-center gap-[2rem] transition-all duration-500 ease-in-out">
-        <img
-          src={certifications[index].image}
-          alt={certifications[index].title}
-          className="w-[20rem] h-auto object-contain rounded-md shadow-md"
-        />
-        <div className="text-center">
-          <h3 className="text-[1.5rem] font-semibold mb-[1rem]">
-            {certifications[index].title}
-          </h3>
-          <p className="text-[1.125rem] leading-[1.75rem] max-w-[40rem]">
-            {certifications[index].text}
-          </p>
-        </div>
+      <div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
+        {certifications.map((cert, i) => (
+          <div
+            key={i}
+            className={`absolute transition-all duration-1000 ease-in-out ${
+              i === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"
+            }`}
+          >
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="w-[25rem] h-auto object-contain rounded-md shadow-md"
+            />
+            <div className="text-center mt-6">
+              <h3 className="text-[2rem] font-semibold mb-[1.5rem] font-[Questrial]">{cert.title}</h3>
+              <p className="text-[1.25rem] leading-[2rem] max-w-[50rem] text-gray-500 font-[Questrial]">
+                {cert.text}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="flex justify-center gap-[1rem] mt-[2rem]">
+      <div className="flex justify-center gap-[1.5rem] mt-[3rem]">
         <button
           onClick={prev}
-          className="px-[1rem] py-[0.5rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110"
+          className="px-[1.5rem] py-[0.75rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110 text-[1.5rem]"
         >
           ‹
         </button>
         <button
           onClick={next}
-          className="px-[1rem] py-[0.5rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110"
+          className="px-[1.5rem] py-[0.75rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110 text-[1.5rem]"
         >
           ›
         </button>

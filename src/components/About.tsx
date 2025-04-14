@@ -3,21 +3,26 @@ export default function About() {
       <section className="flex flex-col items-center text-center mt-[2.5rem] px-[1rem]">
         <h1 className="text-white text-[1.875rem] mb-[1.5rem] tracking-wider">Leticia Eltermann</h1>
   
-        <div className="flex flex-col md:flex-row items-center max-w-[56rem]">
+        <div className="flex flex-col md:flex-row items-center max-w-[56rem] gap-[2rem]">
           <img
             src="/coffeme.png"
             alt="Letícia"
-            className="w-[24rem] h-[24rem] object-contain rounded mb-[1rem] md:mb-0 md:mr-[1.5rem] transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:shadow-lg"
-          />
+            
+            className="w-[24rem] h-[24rem] object-contain rounded transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:shadow-lg"
+          /> <p className="text-[0.75rem] mb-[1.5rem] tracking-widest ">/Sobre</p>
+          
   
-          <div className="text-[0.875rem] text-[#6f7173] leading-relaxed max-w-[28rem]">
-            <p className="text-[0.75rem] mb-[1.5rem] text-[#6f7173] tracking-widest">/Sobre</p>
-            Olá, visitante! Sou uma estudante de Engenharia de Software e programadora júnior. Iniciei minha jornada na tecnologia há dois anos e, desde então, tenho buscado me aprimorar nessa área que me fez me encontrar. Desde o início, percebi o potencial da tecnologia de transformar vidas, oferecendo soluções que aumentam a produtividade e permitem que as pessoas passem mais tempo com suas famílias ou fazendo algo que realmente gostam. A tecnologia é ciência em ação todos os dias. Tenho buscado aprimorar meus conhecimentos em IA, automação, desenvolvimento e dados. Eu realmente acredito que a tecnologia vai salvar o mundo, um dia.
-
-</div>
+          <div className="text-[0.890rem] text-[#e0e0e0] leading-relaxed max-w-[25rem] font-[Questrial]">
+           
+            Sou estudante de Engenharia de Software, tenho 22 anos e acredito no poder transformador da tecnologia. Para mim, ela não apenas muda vidas – ela vai mudar a minha. Atualmente, estou no quinto período da faculdade e já tive a oportunidade de atuar em projetos freelancers de desenvolvimento web no Brasil, utilizando tecnologias como PHP, SaaS e Flask, além de participar de projetos em grupo no meio acadêmico.
+            Tenho buscado absorver cada conhecimento que me é ofertado, sempre com entusiasmo e mente aberta.
+                <br />
+            <br />
+            Fora do ambiente tech, sou apaixonada por literatura e leio desde criança. Também coleciono discos de vinil, Adoro jogar no PC (meu jogo favorito é Red Dead Redemption 2 mas smepre estou jogando algum jogo indie) e mantenho uma playlist chique no Spotify.
+          </div>
         </div>
   
-        <div className="mt-6 text-[0.875rem] text-[#e0e0e0] leading-relaxed max-w-[56rem]">
+        <div className="mt-8 text-[0.875rem] text-[#e0e0e0] leading-relaxed max-w-[56rem] font-[Questrial]">
           <p>
             No meu portfólio, você pode ver meus projetos, certificações, tecnologias e artigos que escrevo, com os quais estou aprendendo e aplicando. Estou sempre em busca de oportunidades para crescer na área de tecnologia.
           </p>
