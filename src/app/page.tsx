@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import About from '../components/About';
 import Certifications from '../components/Certifications';
 import Projetogit from '../components/Projetogit';
