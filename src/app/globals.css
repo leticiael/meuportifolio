@@ -79,11 +79,10 @@ body {
     opacity: 0;
   }
 }
-
 .animate-hat {
   position: absolute;
   top: 0;
   left: 100%;
-  animation: hat-fly 5s ease-in-out;
+  animation: hat-fly 5s ease-in-out forwards; 
   pointer-events: none; 
 }

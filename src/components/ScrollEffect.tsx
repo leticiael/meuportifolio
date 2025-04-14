@@ -17,7 +17,7 @@ export default function ScrollEffect({ children }: ScrollEffectProps) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 } // Ativa quando 10% do elemento está visível
+      { threshold: 0.1 } 
     );
 
     if (elementRef.current) {

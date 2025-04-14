@@ -9,9 +9,9 @@ export default function SocialBar() {
         bottom: "1rem",
         left: "50%",
         transform: "translateX(-50%)",
-        backgroundColor: "rgba(255, 255, 255, 0.1)", // Fundo levemente transparente
-        backdropFilter: "blur(8px)", // Efeito de desfoque
-        WebkitBackdropFilter: "blur(8px)", // Suporte para navegadores baseados em Webkit
+        backgroundColor: "rgba(255, 255, 255, 0.1)", 
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
         borderRadius: "2rem",
         padding: "0.5rem 1.5rem",
         display: "flex",
@@ -19,7 +19,7 @@ export default function SocialBar() {
         gap: "1.5rem",
         zIndex: 9999,
         color: "#fff",
-        borderTop: "1px solid rgba(255, 255, 255, 0.3)", // Bordas mais suaves
+        borderTop: "1px solid rgba(255, 255, 255, 0.3)",
         borderBottom: "1px solid rgba(255, 255, 255, 0.3)",
       }}
     >

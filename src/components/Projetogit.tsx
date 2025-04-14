@@ -7,7 +7,7 @@ export default function Projetogit() {
       description:
         "Este é um projeto desenvolvido em grupo com colegas da faculdade. Trata-se de um sistema de controle financeiro completo, no qual atuei no backend implementando APIs e fornecendo funcionalidades em PHP para web e Kotlin para mobile.",
       image: "/basiliskweb.png",
-      link: "https://github.com/leticiael/Basilisk", // Substitua pelo link correto
+      link: "https://github.com/leticiael/Basilisk", 
     },
     {
       title: "SaaSAppointment",
@@ -56,12 +56,12 @@ export default function Projetogit() {
           <div
   key={index}
   className="flex flex-col items-center bg-[#1e0a0a] rounded-lg shadow-lg p-[1.5rem] max-w-[24rem] w-full transform transition-transform duration-300 hover:scale-125"
-  style={{ height: "28rem" }} // Define uma altura fixa para os cards
+  style={{ height: "28rem" }} 
 >
   <img
     src={project.image}
     alt={project.title}
-    className="w-[20rem] h-[12rem] object-contain rounded-md mb-[1rem]" // Define uma altura fixa para as imagens
+    className="w-[20rem] h-[12rem] object-contain rounded-md mb-[1rem]"
   />
   <h2 className="text-white text-[1.25rem] font-bold mb-[0.5rem] text-center">
     {project.title}

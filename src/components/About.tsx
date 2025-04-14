@@ -6,11 +6,12 @@ export default function About() {
   const [showHat, setShowHat] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShowHat((prev) => !prev);
-    }, 8000); 
+    setShowHat(true);
+    const timeout = setTimeout(() => {
+      setShowHat(false);
+    }, 7000); 
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
