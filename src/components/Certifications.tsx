@@ -59,35 +59,36 @@ export default function Certifications() {
       ref={sectionRef}
       className="w-full max-w-[60rem] mx-auto p-[1.5rem] text-white rounded-2xl shadow-lg text-gray font-[Questrial] backdrop-blur-md "
     >
-      <h2 className="text-[3rem] font-bold mb-[2rem] text-center font-[Questrial] ">
-        / Certificações
+      <h2 className="text-[3rem] font-bold mb-[1.5rem] text-center font-[Questrial] ">
+        Certificações
         <span className="block text-[1.25rem] text-gray-500 font-[Questrial] mt-[0.5rem]">
           Explore as certificações que conquistei ao longo da minha jornada.
         </span>
       </h2>
 
       <div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
-        {certifications.map((cert, i) => (
-          <div
-            key={i}
-            className={`absolute transition-all duration-1000 ease-in-out ${
-              i === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"
-            }`}
-          >
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="w-[25rem] h-auto object-contain rounded-md shadow-md"
-            />
-            <div className="text-center mt-6">
-              <h3 className="text-[2rem] font-semibold mb-[1.5rem] font-[Questrial]">{cert.title}</h3>
-              <p className="text-[1.25rem] leading-[2rem] max-w-[50rem] text-gray-500 font-[Questrial]">
-                {cert.text}
-              </p>
-            </div>
-          </div>
-        ))}
+  {certifications.map((cert, i) => (
+    <div
+      key={i}
+      className={`absolute transition-all duration-1000 ease-in-out flex flex-col items-center justify-center ${
+        i === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"
+      }`}
+      style={{ width: "100%", height: "100%" }} // Garante que o slide ocupe todo o espaço disponível
+    >
+      <img
+        src={cert.image}
+        alt={cert.title}
+        className="w-[20rem] h-auto object-contain rounded-md shadow-md" // Define largura fixa e altura proporcional
+      />
+      <div className="text-center mt-6">
+        <h3 className="text-[2rem] font-semibold mb-[1.5rem] font-[Questrial]">{cert.title}</h3>
+        <p className="text-[1.25rem] leading-[2rem] max-w-[50rem] text-gray-500 font-[Questrial]">
+          {cert.text}
+        </p>
       </div>
+    </div>
+  ))}
+</div>
 
       <div className="flex justify-center gap-[1.5rem] mt-[2rem]">
         <button

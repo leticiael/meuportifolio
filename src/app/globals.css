@@ -61,3 +61,31 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@keyframes hat-fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(50px, -50px) scale(1.2);
+  }
+  50% {
+    transform: translate(100px, -100px) scale(1);
+  }
+  75% {
+    transform: translate(150px, -50px) scale(0.8);
+  }
+  100% {
+    transform: translate(200px, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-hat {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: hat-fly 5s ease-in-out;
+  pointer-events: none; 
+}
