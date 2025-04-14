@@ -1,18 +1,14 @@
 export default function MediumArticles() {
     return (
-      <section className="w-full max-w-3xl p-8 my-10 text-[#e0e0e0] font-[Questrial] shadow-lg backdrop-blur-md bg-[#1e0a0a]/80 rounded-lg border-[2px] border-[#6f7173] relative">
-        <div className="absolute inset-0 bg-[url('/textures/paper-texture.png')] opacity-5 pointer-events-none rounded-lg"></div>
-  
-        {/* Imagem acima do título */}
+      <section className="w-full max-w-3xl p-8 my-10 text-[#e0e0e0] font-[Questrial] shadow-lg rounded-lg relative">
         <div className="flex justify-center mb-6">
           <img
-            src="/mediumme.png"
-            alt="Medium Banner"
-            className="w-[30rem] h-auto object-contain rounded-lg shadow-md"
+            src="/journey.png"
+            className="w-[10rem] h-auto object-contain rounded-lg shadow-md"
           />
         </div>
   
-        <h2 className="text-3xl font-bold mb-8 border-b-[2px] border-[#6f7173] pb-3 uppercase tracking-widest">
+        <h2 className="text-3xl font-bold mb-8 pb-3 uppercase tracking-widest text-center">
           Meus Últimos Artigos
         </h2>
   
@@ -37,7 +33,7 @@ export default function MediumArticles() {
             Neste artigo, discutimos como a tecnologia está transformando a agroindústria, permitindo que os agricultores tomem decisões mais informadas e eficientes. A revolução dos dados está mudando a forma como cultivamos e gerenciamos nossas terras.
           </p>
           <a
-            href="https://medium.com/seuartigo2"
+            href="https://medium.com/@leeltermann/a-revolu%C3%A7%C3%A3o-dos-dados-na-agroind%C3%BAstria-como-o-campo-se-tornou-inteligente-189b2ec2ecb5"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-[#3a0f0f] text-white font-[Questrial] rounded-lg hover:bg-[#2a0b0b] transition-all duration-300"
@@ -46,7 +42,7 @@ export default function MediumArticles() {
           </a>
         </div>
   
-        <div className="pt-4 border-t-[2px] border-[#6f7173]">
+        <div className="pt-4">
           <a
             href="https://medium.com/@leeltermann"
             target="_blank"

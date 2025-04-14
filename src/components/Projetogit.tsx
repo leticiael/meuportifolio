@@ -20,38 +20,42 @@ export default function Projetogit() {
 
   return (
     <section className="flex flex-col items-center text-center mt-[2.5rem] px-[1rem]">
-      <h1 className="text-white text-[1.875rem] mb-[1.5rem] tracking-wider">
-        Projetos Práticos
-      </h1><svg
-          className="mt-[2rem] w-full h-[6rem]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
+      <svg
+        className="mt-[2rem] w-full h-[6rem]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="none"
+          stroke="#6f7173"
+          strokeWidth="3"
+          d="M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160"
         >
-          <path
-            fill="none"
-            stroke="#6f7173"
-            strokeWidth="3"
-            d="M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160"
-          >
-            <animate
-              attributeName="d"
-              dur="2.5s"
-              repeatCount="indefinite"
-              values="
+          <animate
+            attributeName="d"
+            dur="2.5s"
+            repeatCount="indefinite"
+            values="
                 M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
                 M0,160 Q120,260 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
                 M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160
               "
-            />
-          </path>
-        </svg>
+          />
+        </path>
+      </svg>
+      <br />
+      <h1 className="text-white text-[1.875rem] mb-[1.5rem] tracking-wider">
+        Projetos Práticos
+      </h1>
+      <br />
+      <br />
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-[2rem] max-w-[56rem]">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-[#1e0a0a] rounded-lg shadow-lg p-[1.5rem] max-w-[24rem] w-full"
+            className="flex flex-col items-center bg-[#1e0a0a] rounded-lg shadow-lg p-[1.5rem] max-w-[24rem] w-full transform transition-transform duration-300 hover:scale-105"
           >
             <img
               src={project.image}
@@ -61,45 +65,44 @@ export default function Projetogit() {
             <h2 className="text-white text-[1.25rem] font-bold mb-[0.5rem]">
               {project.title}
             </h2>
-            <p className="text-[#e0e0e0] text-[0.875rem] leading-relaxed mb-[1rem]">
+            <p className="text-[#e0e0e0] text-[0.875rem] leading-relaxed mb-[1rem] font-[Questrial]">
               {project.description}
             </p>
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-[1rem] py-[0.5rem] bg-[#6f7173] text-white rounded hover:bg-[#4a1c1c] transition-all duration-300"
+              className="px-[1rem] py-[0.5rem] bg-[#6f7173] text-black  rounded hover:bg-[#4a1c1c] transition-all duration-300 font-[Questrial] text-[1rem]"
             >
               Ver Projeto
             </a>
           </div>
         ))}
-        
       </div>
       <svg
-          className="mt-[2rem] w-full h-[6rem]"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          preserveAspectRatio="none"
+        className="mt-[2rem] w-full h-[6rem]"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="none"
+          stroke="#6f7173"
+          strokeWidth="3"
+          d="M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160"
         >
-          <path
-            fill="none"
-            stroke="#6f7173"
-            strokeWidth="3"
-            d="M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160"
-          >
-            <animate
-              attributeName="d"
-              dur="2.5s"
-              repeatCount="indefinite"
-              values="
+          <animate
+            attributeName="d"
+            dur="2.5s"
+            repeatCount="indefinite"
+            values="
                 M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
                 M0,160 Q120,260 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160;
                 M0,160 Q120,60 240,160 T480,160 T720,160 T960,160 T1200,160 T1440,160
               "
-            />
-          </path>
-        </svg>
+          />
+        </path>
+      </svg>
     </section>
   );
 }

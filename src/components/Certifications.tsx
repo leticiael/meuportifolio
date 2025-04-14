@@ -57,11 +57,10 @@ export default function Certifications() {
   return (
     <div
       ref={sectionRef}
-      className="w-full max-w-[60rem] mx-auto p-[3rem] text-white rounded-2xl shadow-lg font-[Questrial] border-[2px] border-[#6f7173] relative"
+      className="w-full max-w-[60rem] mx-auto p-[1.5rem] text-white rounded-2xl shadow-lg text-gray font-[Questrial] backdrop-blur-md "
     >
-      {/* Título maior */}
-      <h2 className="text-[3rem] font-bold mb-[2rem] text-center ">
-        Certificações
+      <h2 className="text-[3rem] font-bold mb-[2rem] text-center font-[Questrial] ">
+        / Certificações
         <span className="block text-[1.25rem] text-gray-500 font-[Questrial] mt-[0.5rem]">
           Explore as certificações que conquistei ao longo da minha jornada.
         </span>
@@ -90,7 +89,7 @@ export default function Certifications() {
         ))}
       </div>
 
-      <div className="flex justify-center gap-[1.5rem] mt-[3rem]">
+      <div className="flex justify-center gap-[1.5rem] mt-[2rem]">
         <button
           onClick={prev}
           className="px-[1.5rem] py-[0.75rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110 text-[1.5rem]"
