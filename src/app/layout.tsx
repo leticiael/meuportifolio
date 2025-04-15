@@ -2,7 +2,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 
 export const metadata = {
-  title: 'Portfólio Letícia',
+  title: 'Portfólio Leticia',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
