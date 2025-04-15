@@ -27,23 +27,23 @@ export default function About() {
         <p className="text-[0.75rem] mb-[1.5rem] tracking-widest ">/Sobre</p>
 
         <div className="text-[0.890rem] text-[#e0e0e0] leading-relaxed max-w-[25rem] font-[Questrial] relative">
-          Sou estudante de Engenharia de Software, tenho 22 anos e acredito no poder transformador da tecnologia. Para mim, ela não apenas muda vidas – ela vai mudar a minha. Atualmente, estou no quinto período da faculdade e já tive a oportunidade de atuar em projetos freelancers de desenvolvimento web no Brasil, utilizando tecnologias como PHP, SaaS e Flask, além de participar de projetos em grupo no meio acadêmico.
-          Tenho buscado absorver cada conhecimento que me é ofertado, sempre com entusiasmo e mente aberta.
-          <br />
-          <br />
-          Fora do ambiente tech, sou apaixonada por literatura e leio desde criança. Também coleciono discos de vinil, adoro jogar no PC (meu jogo favorito é{" "}
-          <span className="relative inline-block">
-            Red Dead Redemption 2
-            {showHat && (
-              <img
-                src="/cowboy.png" 
-                alt="Chapéu de Cowboy"
-                className="absolute animate-hat w-[2rem] h-[2rem]"
-              />
-            )}
-          </span>
-          , mas sempre estou jogando algum jogo indie) e mantenho uma playlist fiel no Spotify.
-        </div>
+  Sou estudante de Engenharia de Software, tenho 22 anos e acredito no poder transformador da <span className="highlight">tecnologia</span>. Para mim, ela não apenas muda vidas – ela vai mudar a minha. Atualmente, estou no quinto período da faculdade e já tive a oportunidade de atuar em projetos freelancers de <span className="highlight">desenvolvimento web</span> no Brasil, utilizando tecnologias como <span className="highlight">PHP</span>, <span className="highlight">SaaS</span> e <span className="highlight">Flask</span>, além de participar de projetos em grupo no meio acadêmico.
+  Tenho buscado absorver cada conhecimento que me é ofertado, sempre com entusiasmo e mente aberta.
+  <br />
+  <br />
+  Fora do ambiente tech, sou apaixonada por <span className="highlight">literatura</span> e leio desde criança. Também coleciono discos de vinil, adoro jogar no PC (meu jogo favorito é{" "}
+  <span className="relative inline-block highlight">
+    Red Dead Redemption 2
+    {showHat && (
+      <img
+        src="/cowboy.png" 
+        alt="Chapéu de Cowboy"
+        className="absolute animate-hat w-[2rem] h-[2rem]"
+      />
+    )}
+  </span>
+  , mas sempre estou jogando algum jogo indie) e mantenho uma playlist fiel no <span className="highlight">Spotify</span>.
+</div>
       </div>
 
       <div className="mt-8 text-[0.875rem] text-[#e0e0e0] leading-relaxed max-w-[56rem] font-[Questrial]">

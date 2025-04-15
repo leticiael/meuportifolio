@@ -86,3 +86,13 @@ body {
   animation: hat-fly 5s ease-in-out forwards; 
   pointer-events: none; 
 }
+.highlight {
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.highlight:hover {
+  transform: scale(1.2);
+  color: #271009; /* Cor de destaque ao passar o mouse */
+}
