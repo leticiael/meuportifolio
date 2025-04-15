@@ -24,7 +24,7 @@ export default function Certifications() {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null); // Ref para armazenar o intervalo
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); 
 
   const clearAndSetInterval = () => {
     if (intervalRef.current) {
