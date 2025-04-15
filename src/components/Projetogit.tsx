@@ -70,13 +70,13 @@ export default function Projetogit() {
     {project.description}
   </p>
   <a
-    href={project.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-[1rem] py-[0.5rem] bg-[#6f7173] text-black rounded hover:bg-[#4a1c1c] transition-all duration-300 font-[Questrial] text-[1rem]"
-  >
-    Ver Projeto
-  </a>
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-[1.5rem] py-[0.75rem] bg-white/10 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[#4a1c1c] hover:to-[#1a0000] hover:text-white hover:scale-110 text-[1rem] font-[Questrial]"
+>
+  Ver Projeto
+</a>
 </div>
         ))}
       </div>
