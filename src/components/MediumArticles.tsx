@@ -4,7 +4,7 @@ export default function MediumArticles() {
         <div className="flex justify-center mb-6">
           <img
             src="/journey.png"
-            className="w-[10rem] h-auto object-contain rounded-lg shadow-md"
+            className="w-[10rem] h-[10rem] object-contain rounded transition-transform duration-500 hover:scale-110 hover:rotate-3 hover:shadow-lg w-[10rem] h-auto object-contain rounded-lg shadow-md"
           />
         </div>
   
