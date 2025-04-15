@@ -24,9 +24,24 @@ export default function Certifications() {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); // Ref para armazenar o intervalo
 
-  const next = () => setIndex((i) => (i + 1) % certifications.length);
-  const prev = () => setIndex((i) => (i - 1 + certifications.length) % certifications.length);
+  const clearAndSetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); 
+    }
+    intervalRef.current = setInterval(next, 8000); 
+  };
+
+  const next = () => {
+    setIndex((i) => (i + 1) % certifications.length);
+    clearAndSetInterval(); 
+  };
+
+  const prev = () => {
+    setIndex((i) => (i - 1 + certifications.length) % certifications.length);
+    clearAndSetInterval(); 
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,8 +65,13 @@ export default function Certifications() {
   useEffect(() => {
     if (!isVisible) return;
 
-    const interval = setInterval(next, 7000);
-    return () => clearInterval(interval);
+    clearAndSetInterval();
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current); 
+      }
+    };
   }, [isVisible]);
 
   return (
@@ -66,29 +86,29 @@ export default function Certifications() {
         </span>
       </h2>
 
-<div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
-  {certifications.map((cert, i) => (
-    <div
-      key={i}
-      className={`absolute transition-all duration-1000 ease-in-out flex flex-col items-center justify-center ${
-        i === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"
-      }`}
-      style={{ width: "100%", height: "100%" }} // Garante que o slide ocupe todo o espaço disponível
-    >
-      <img
-        src={cert.image}
-        alt={cert.title}
-        className="w-[20rem] h-auto object-contain rounded-md shadow-md" // Define largura fixa e altura proporcional
-      />
-      <div className="text-center mt-6">
-        <h3 className="text-[2rem] font-semibold mb-[1.5rem] font-[Questrial]">{cert.title}</h3>
-        <p className="text-[1.25rem] leading-[2rem] max-w-[50rem] text-gray-500 font-[Questrial]">
-          {cert.text}
-        </p>
+      <div className="relative w-full h-[30rem] flex items-center justify-center overflow-hidden">
+        {certifications.map((cert, i) => (
+          <div
+            key={i}
+            className={`absolute transition-all duration-1000 ease-in-out flex flex-col items-center justify-center ${
+              i === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"
+            }`}
+            style={{ width: "100%", height: "100%" }}
+          >
+            <img
+              src={cert.image}
+              alt={cert.title}
+              className="w-[20rem] h-auto object-contain rounded-md shadow-md"
+            />
+            <div className="text-center mt-6">
+              <h3 className="text-[2rem] font-semibold mb-[1.5rem] font-[Questrial]">{cert.title}</h3>
+              <p className="text-[1.25rem] leading-[2rem] max-w-[50rem] text-gray-500 font-[Questrial]">
+                {cert.text}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
       <div className="flex justify-center gap-[1.5rem] mt-[2rem]">
         <button
