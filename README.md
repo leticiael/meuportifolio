@@ -1,3 +1,44 @@
+# Portfólio - Letícia Eltermann
+
+Este repositório contém o código-fonte do meu portfólio profissional, desenvolvido com o objetivo de apresentar minhas habilidades como desenvolvedora de software, meus principais projetos e minha identidade visual como profissional da área de tecnologia.
+
+Acesse: [https://leticiaeltermann.vercel.app](https://leticiaeltermann.vercel.app)
+![cwTgf63](https://github.com/user-attachments/assets/72443f51-4d1d-48ff-81ce-80badd198cd2)
+
+
+## Sobre o Projeto
+
+O portfólio foi construído com foco em performance, responsividade e uma experiência visual consistente. A interface valoriza a clareza e o destaque dos projetos, com animações leves e uma paleta escura com contrastes suaves.
+
+A estrutura da aplicação é baseada na arquitetura de componentes do React, utilizando Next.js para melhor performance e escalabilidade.
+
+## Tecnologias e Ferramentas
+
+- **Next.js**: Framework React com renderização no lado do servidor (SSR), roteamento nativo e otimizações automáticas de performance.
+- **React**: Biblioteca para construção de interfaces declarativas, componentizadas e reativas.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código, aumentando a robustez e a legibilidade da aplicação.
+- **Tailwind CSS**: Framework de utilitários CSS para criação rápida de interfaces responsivas e consistentes.
+- **Vercel**: Plataforma de deploy contínuo otimizada para aplicações Next.js, garantindo builds rápidos e alta disponibilidade.
+
+## Funcionalidades
+
+- Layout responsivo adaptado para dispositivos móveis e desktops.
+- Seção "Sobre Mim" com descrição profissional.
+- Galeria de projetos com título, descrição, tecnologias utilizadas, imagem e link para o repositório no GitHub.
+- Animações suaves com foco em usabilidade e experiência do usuário.
+- Design modular com fácil manutenção e escalabilidade.
+
+## Projetos em Destaque
+
+Os projetos exibidos no portfólio são selecionados com base na sua relevância técnica e impacto prático. Cada um contém:
+
+- Breve descrição funcional.
+- Tecnologias utilizadas no desenvolvimento.
+- Link direto para o repositório público no GitHub.
+- Screenshot ou preview para melhor visualização do projeto.
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
