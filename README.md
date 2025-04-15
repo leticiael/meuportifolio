@@ -28,20 +28,11 @@ A estrutura da aplicação é baseada na arquitetura de componentes do React, ut
 - Animações suaves com foco em usabilidade e experiência do usuário.
 - Design modular com fácil manutenção e escalabilidade.
 
-## Projetos em Destaque
-
-Os projetos exibidos no portfólio são selecionados com base na sua relevância técnica e impacto prático. Cada um contém:
-
-- Breve descrição funcional.
-- Tecnologias utilizadas no desenvolvimento.
-- Link direto para o repositório público no GitHub.
-- Screenshot ou preview para melhor visualização do projeto.
-
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Comece aqui / Getting Started
 
 First, run the development server:
 
@@ -75,4 +66,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# meuportifolio
+
